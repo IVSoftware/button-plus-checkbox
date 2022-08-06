@@ -1,11 +1,11 @@
 # Conditional Increment
 
-Instead of `Level 1` being an actual `Button`, it might be useful to make it a `Checkbox` instead, and then make it _look_ like a button by setting the `Appearance` property to `Button` in the designer. Here is a simple example where clicking on `mButton` looks at the state of `level1` to determine the correct increment value. At the same time, toggling the state of `level1` sets the `Increment` value of the `NumericUpDown` control so that the Up/Down arrows _also_ use the correct value of 1 or 2.
+To make the increment value be 1 or 2, make `Level 1` a `Checkbox` with the _appearance_ of being a `Button` instead. You can do this by setting the `Appearance` property to `Button` in the designer. Here is a simple example where clicking on `mButton` looks at the state of `level1` to determine the correct increment value. At the same time, toggling the state of `level1` sets the `Increment` value of the `NumericUpDown` control so that the Up/Down arrows _also_ use the correct value of 1 or 2.
 
 ![checkbox looks like a button](https://github.com/IVSoftware/button-plus-checkbox/blob/master/button_plus_checkbox/ReadMe/screenshot.png)
 
 ***
-*Example of coding the `MainForm` that has the behavior you describe:*
+*Example of coding the `MainForm`:*
 
     public partial class MainForm : Form , INotifyPropertyChanged
     {
